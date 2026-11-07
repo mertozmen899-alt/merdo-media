@@ -24,7 +24,7 @@
       l: { hizmet: 'Hizmet', sektor: 'Sektör', butce: 'Bütçe', ad: 'Ad', tel: 'Telefon', isletme: 'İşletme', not: 'Not' },
     },
     chat: {
-      hello: 'Merhaba! Ben Merdo Asistan. 👋',
+      hello: 'Merhaba, ben Elif! 👋 Merdo Media\'nın asistanıyım.',
       ask: 'Merdo Media\'da hangi konuda bilgi almak istersiniz?', askAgain: 'Başka hangi konuda yardımcı olayım?',
       topics: {
         web: ['Web sitesi yaptırmak istiyorum', 'Harika! Birkaç bilgiyle 48 saatte ilk taslağı hazırlayabiliriz.'],

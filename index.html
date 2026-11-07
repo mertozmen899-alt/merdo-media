@@ -433,20 +433,13 @@
 
 <!-- ============ SOHBET BALONU ============ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="av" viewBox="0 0 64 64">
-    <defs><linearGradient id="avBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4d66ff"/><stop offset="1" stop-color="#1f35c9"/></linearGradient></defs>
-    <circle cx="32" cy="32" r="32" fill="url(#avBg)"/>
-    <path d="M19 17h26a9 9 0 0 1 9 9v13a9 9 0 0 1-9 9H31l-9 7v-7h-3a9 9 0 0 1-9-9V26a9 9 0 0 1 9-9z" fill="#fff"/>
-    <ellipse cx="25" cy="31" rx="3" ry="3.4" fill="#2a45e8"><animate attributeName="ry" values="3.4;3.4;.5;3.4;3.4" keyTimes="0;.46;.5;.54;1" dur="4.5s" repeatCount="indefinite"/></ellipse>
-    <ellipse cx="39" cy="31" rx="3" ry="3.4" fill="#2a45e8"><animate attributeName="ry" values="3.4;3.4;.5;3.4;3.4" keyTimes="0;.46;.5;.54;1" dur="4.5s" repeatCount="indefinite"/></ellipse>
-    <path d="M27.5 38.5q4.5 3.6 9 0" fill="none" stroke="#2a45e8" stroke-width="2.6" stroke-linecap="round"/>
-  </symbol>
+  <symbol id="av" viewBox="0 0 64 64"><clipPath id="avc"><circle cx="32" cy="32" r="32"/></clipPath><image href="assets/asistan.webp" width="64" height="64" preserveAspectRatio="xMidYMid slice" clip-path="url(#avc)"/></symbol>
 </svg>
 <div class="cw" id="cw">
   <div class="cw-x" aria-hidden="true"></div>
   <div class="cw-tease" id="cwTease" role="button" tabindex="0" aria-label="Sohbeti aç"><button type="button" id="cwTeaseX" aria-label="Mesajı kapat">×</button><span class="tx" id="cwTx"></span></div>
   <div class="cw-panel" id="cwPanel" role="dialog" aria-label="Merdo Media sohbet asistanı">
-    <div class="cw-head"><span class="cw-av"><svg><use href="#av"/></svg></span><div><b>Merdo Asistan</b><small>Çevrimiçi · hızlı yanıt</small></div><button type="button" id="cwClose" aria-label="Sohbeti kapat">×</button></div>
+    <div class="cw-head"><span class="cw-av"><svg><use href="#av"/></svg></span><div><b>Elif</b><small>Merdo Media asistanı · Çevrimiçi</small></div><button type="button" id="cwClose" aria-label="Sohbeti kapat">×</button></div>
     <div class="cw-body" id="cwBody" aria-live="polite"></div>
     <p class="cw-err" id="cwErr" role="alert"></p>
     <form class="cw-in" id="cwIn"><input id="cwInput" aria-label="Mesajınız" maxlength="80"><button type="submit" aria-label="Gönder">➤</button></form>
