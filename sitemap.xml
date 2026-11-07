@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://merdomedia.com.tr/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://merdomedia.com.tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://merdomedia.com.tr/en/"/>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://merdomedia.com.tr/en/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://merdomedia.com.tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://merdomedia.com.tr/en/"/>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url><loc>https://merdomedia.com.tr/web-sitesi-fiyatlari.html</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://merdomedia.com.tr/kvkk.html</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://merdomedia.com.tr/gizlilik.html</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://merdomedia.com.tr/cerez.html</loc><lastmod>2026-11-07</lastmod></url>
+</urlset>

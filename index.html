@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merdo Media — Web, video ve otomasyon stüdyosu</title>
+<meta name="description" content="Web sitesi, reklam videosu ve otomasyon. İlk taslak 48 saatte.">
+<!-- shortcut: alan adı henüz yok; merdomedia.com.tr ve og-image.png yer tutucu, yayından önce gerçek adresle değiştir -->
+<link rel="canonical" href="https://merdomedia.com.tr/">
+<link rel="alternate" hreflang="tr" href="https://merdomedia.com.tr/">
+<link rel="alternate" hreflang="en" href="https://merdomedia.com.tr/en/">
+<meta name="theme-color" content="#2a45e8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Merdo Media">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Merdo Media — Web, video ve otomasyon stüdyosu">
+<meta property="og:description" content="Web sitesi, reklam videosu ve otomasyon. İlk taslak 48 saatte.">
+<meta property="og:url" content="https://merdomedia.com.tr/">
+<meta property="og:image" content="https://merdomedia.com.tr/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Merdo Media","description":"Web sitesi, reklam videosu ve otomasyon stüdyosu.","url":"https://merdomedia.com.tr/","telephone":"+905556984086","areaServed":["TR","Worldwide"],"knowsLanguage":["tr","en"],"address":{"@type":"PostalAddress","addressLocality":"Çorum","addressCountry":"TR"}}</script>
+<script>try{var t=localStorage.getItem("merdo-theme")}catch(e){}document.documentElement.dataset.theme=t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")</script>
+<link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<div class="orbs" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div class="glow" id="glow" aria-hidden="true"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="./" class="logo"><i></i>Merdo Media</a>
+    <ul>
+      <li class="has-mega"><a href="#hizmetler">Hizmetler</a>
+        <div class="mega">
+          <a href="#d-web"><span class="mi" style="background:var(--peach)">W</span><span><b>Web siteleri</b><small>Kurumsal site, katalog, landing page</small></span></a>
+          <a href="#d-video"><span class="mi" style="background:var(--lilac)">V</span><span><b>Reklam videoları</b><small>Dikey, kare ve yatay formatlar</small></span></a>
+          <a href="#d-oto"><span class="mi" style="background:var(--mintl)">O</span><span><b>Otomasyon</b><small>WhatsApp ve form akışları</small></span></a>
+          <a href="#d-sektor"><span class="mi" style="background:var(--butter)">S</span><span><b>Sektör paketleri</b><small>Spor kulübü, sanayi, kafe, klinik</small></span></a>
+          <a href="#ekler" class="all"><span>Ek hizmetler: logo, sosyal medya, QR menü…</span><span>→</span></a>
+        </div>
+      </li>
+      <li><a href="#isler">İşler</a></li><li><a href="#surec">Süreç</a></li><li><a href="#paketler">Paketler</a></li><li><a href="#sss">SSS</a></li><li><a href="#" data-wa="destek">Destek</a></li>
+    </ul>
+    <div class="nav-r">
+      <span class="lang"><b>TR</b> / <a href="en/" hreflang="en" lang="en">EN</a></span>
+      <button class="theme" id="theme" aria-label="Açık / koyu tema"></button>
+      <a href="#iletisim" data-open="form" class="btn btn-d btn-sm mag">Demo iste <span class="arr">→</span></a>
+      <button class="burger" id="burger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mmenu">☰</button>
+    </div>
+  </div>
+</header>
+<nav class="mmenu" id="mmenu" aria-label="Mobil menü">
+  <a href="#hizmetler">Hizmetler <span>→</span></a><a href="#isler">İşler <span>→</span></a><a href="#surec">Süreç <span>→</span></a><a href="#paketler">Paketler <span>→</span></a><a href="#sss">SSS <span>→</span></a><a href="#" data-wa="destek">Destek talebi <span>→</span></a>
+  <a href="#iletisim" data-open="form" class="btn btn-d">Ücretsiz demo iste <span class="arr">→</span></a>
+</nav>
+
+<main id="main">
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="shape s-circ float" data-depth="30" aria-hidden="true"></div>
+  <div class="shape s-dia" data-depth="-22" aria-hidden="true"></div>
+  <div class="shape s-half float" data-depth="18" aria-hidden="true"></div>
+  <div class="shape s-flower" data-depth="-28" aria-hidden="true"><svg viewBox="0 0 100 100"><g fill="#ffd23f"><circle cx="50" cy="22" r="22"/><circle cx="78" cy="50" r="22"/><circle cx="50" cy="78" r="22"/><circle cx="22" cy="50" r="22"/><circle cx="50" cy="50" r="24"/></g></svg></div>
+  <div class="shape s-ring float" data-depth="14" aria-hidden="true"></div>
+
+  <div class="wrap" style="position:relative">
+    <div class="status" aria-hidden="true">
+      <span>Stüdyo</span><b>Çorum → Dünya</b>
+      <span>Saat</span><b id="clock">--:--:--</b>
+      <span>İlk taslak</span><b>48 saat</b>
+      <span>Durum</span><b class="ok">● yeni işe müsait</b>
+    </div>
+    <div class="eyebrow"><span class="pill"><span class="dot"></span>Tasarım · Video · Otomasyon</span><span class="mono muted">// v1.0 · 2026</span></div>
+    <h1>Site, video ve otomasyonla işinizi <span class="typed"><span class="grad" id="typed">büyütüyoruz.</span><span class="caret"></span></span></h1>
+    <div class="hero-b">
+      <div>
+        <p>Merdo Media; işletmeler için <b>web sitesi, reklam videosu ve otomasyon</b> hazırlar. İlk taslağı 48 saatte görür, beğenirseniz devam edersiniz.</p>
+        <div class="ctas">
+          <a href="#iletisim" data-open="form" class="btn btn-d mag">Ücretsiz demo iste <span class="arr">→</span></a>
+          <a href="#isler" class="btn btn-l">İşleri gör</a>
+        </div>
+      </div>
+      <div class="console rv d2" aria-label="Örnek proje akışı">
+        <div class="c-top"><i></i><i></i><i></i><span>merdo-studio — proje akışı</span></div>
+        <div class="c-body" id="cbody"></div>
+        <div class="c-bar"><i id="cbar"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RAKAMLAR ============ -->
+<section class="sec" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eb mono rv">Hız + kontrol</div><h2 class="h2 rv d1">Hızlı başlıyoruz. <span class="soft">Net teslim ediyoruz.</span></h2></div>
+      <p class="rv d2">İlk taslağı 48 saatte görürsünüz. Fiyat baştan bellidir; teslimde domain, kod ve hesaplar size aittir.</p>
+    </div>
+    <div class="stats">
+      <div class="stat rv"><span class="ix">[01]</span><div class="n"><span data-count="48">0</span> sa</div><div class="t">İçerik geldikten sonra ilk taslak</div></div>
+      <div class="stat rv d1"><span class="ix">[02]</span><div class="n"><span data-count="5">0</span></div><div class="t">Yayında ve portföyde olan iş</div></div>
+      <div class="stat rv d2"><span class="ix">[03]</span><div class="n"><span data-count="4">0</span></div><div class="t">Hizmet alanı: web, video, otomasyon, sektör paketi</div></div>
+      <div class="stat rv"><span class="ix">[04]</span><div class="n">TR/EN</div><div class="t">Türkiye ve yurt dışına iki dilde hizmet</div></div>
+      <div class="stat rv d1"><span class="ix">[05]</span><div class="n">%<span data-count="100">0</span></div><div class="t">Kod, domain ve hesaplar sizin</div></div>
+      <div class="stat rv d2"><span class="ix">[06]</span><div class="n"><span data-count="1">0</span></div><div class="t">Muhatap. Aracı yok, proje müdürü zinciri yok</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANİFESTO ============ -->
+<section class="dark sec manifesto" id="manifesto">
+  <div class="wrap">
+    <div class="eb mono">Neden Merdo</div>
+    <p class="big" id="mbig">Önce sonucu gösteriyoruz. Beğenirseniz devam ediyoruz.</p>
+    <div class="cols">
+      <p>Uzun görüşme ve teklif sürecini kısaltıyoruz. İşletmenize özel <b>ücretsiz bir taslak</b> hazırlıyor, kararı size bırakıyoruz.</p>
+      <p>Paket fiyatları sitede yazılı. Teslimden sonra da <b>bakım ve güncelleme</b> desteği veriyoruz.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HİZMETLER ============ -->
+<section class="sec" id="hizmetler">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eb mono rv">Hizmetler</div><h2 class="h2 rv d1">İhtiyacınız olan her şey. <span class="soft">Tek stüdyoda.</span></h2></div>
+      <p class="rv d2">İlk izlenimi veren siteden, satışı hızlandıran otomasyona kadar. Her hizmet ayrı alınabilir ya da pakette birleşir.</p>
+    </div>
+    <div class="bento">
+      <article class="card c-web rv spot">
+        <span class="mono">01 · Web siteleri</span>
+        <h3>Kurumsal site, katalog, landing page</h3>
+        <p>Hızlı, mobil uyumlu, arama motoruna hazır. Kod ve domain ilk günden sizin.</p>
+        <div class="mock m-browser" id="mbrowser">
+          <div class="bar"><i></i><i></i><i></i><span>isletmeniz.com</span></div>
+          <div class="pg"><div style="display:grid;gap:10px"><div class="blk h" style="transition-delay:.1s"></div><div class="blk t" style="transition-delay:.25s"></div><div class="blk t" style="width:80%;transition-delay:.35s"></div><div class="blk btnb" style="transition-delay:.5s"></div></div><div class="blk img" style="transition-delay:.3s"></div></div>
+        </div>
+      </article>
+      <article class="card c-vid rv d1 spot">
+        <span class="mono">02 · Video</span>
+        <h3>Reklam videoları</h3>
+        <p>Remotion ile kodlanan videolar: 9:16, 1:1, 16:9 tek seferde.</p>
+        <div class="m-phone"><div class="scene"></div><div class="cap">Yeni sezon<br>şimdi mağazada</div><div class="pb"><i></i></div></div>
+      </article>
+      <article class="card c-oto rv spot">
+        <span class="mono">03 · Otomasyon</span>
+        <h3>WhatsApp ve form akışları</h3>
+        <p>Gelen mesajı yanıtlar, kaydeder, size haber verir.</p>
+        <div class="mock m-chat" id="mchat">
+          <div class="bub in">Merhaba, fiyat alabilir miyim?</div>
+          <div class="bub bot">otomasyon → katalog gönderildi</div>
+          <div class="bub in typing"><span class="dots"><i></i><i></i><i></i></span></div>
+          <div class="bub out">Tabii! Katalog ve randevu linki burada.</div>
+        </div>
+      </article>
+      <article class="card c-sek rv d1 spot">
+        <span class="mono">04 · Sektör paketleri</span>
+        <h3>Hazır paketler</h3>
+        <p>Sektörünüze göre hazırlanmış site + video + otomasyon.</p>
+        <div class="chips"><span class="chip"><i style="background:var(--orange)"></i>Spor kulübü</span><span class="chip"><i style="background:var(--violet)"></i>Sanayi</span><span class="chip"><i style="background:var(--mint)"></i>Kafe</span><span class="chip"><i style="background:var(--sky)"></i>Klinik</span></div>
+      </article>
+      <article class="card c-dark rv d2">
+        <span class="mono">Her pakette</span>
+        <h3>Teslimde neler var</h3>
+        <div class="terminal"><b>›</b> domain ve hosting kurulumu<br><b>›</b> mobil uyum testi<br><b>›</b> Google harita kaydı<br><b>›</b> kod ve hesaplar sizde</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HİZMET AYRINTILARI ============ -->
+<section class="sec" id="detay" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eb mono rv">Ayrıntılar</div><h2 class="h2 rv d1">Neler dahil, <span class="soft">neler değil.</span></h2></div>
+      <p class="rv d2">Sürpriz maliyet olmasın diye her hizmetin kapsamını baştan yazıyoruz.</p>
+    </div>
+    <div class="detail rv" id="d-web">
+      <div>
+        <span class="mono muted">01 · Web siteleri</span>
+        <h3>İlk izlenimi veren site</h3>
+        <p class="lead">Kurumsal tanıtım, ürün kataloğu ya da tek sayfalık kampanya sitesi. Telefonda hızlı açılır, Google'da bulunur.</p>
+        <div class="inc">
+          <div class="yes"><h4>Dahil</h4><ul><li>Size özel tasarım</li><li>Mobil uyum</li><li>WhatsApp ve iletişim formu</li><li>Temel SEO kurulumu</li><li>Domain ve hosting kurulumu</li></ul></div>
+          <div class="no"><h4>Dahil değil</h4><ul><li>Domain ve hosting yıllık ücreti</li><li>Profesyonel fotoğraf çekimi</li><li>Uzun metin yazımı (ek hizmet)</li></ul></div>
+        </div>
+      </div>
+      <div class="d-vis" style="background:var(--peach)">
+        <div class="mock m-browser">
+          <div class="bar"><i></i><i></i><i></i><span>isletmeniz.com</span></div>
+          <div class="pg"><div style="display:grid;gap:10px"><div class="blk h" style="transition-delay:.1s"></div><div class="blk t" style="transition-delay:.25s"></div><div class="blk t" style="width:80%;transition-delay:.35s"></div><div class="blk btnb" style="transition-delay:.5s"></div></div><div class="blk img" style="transition-delay:.3s"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="detail rv" id="d-video">
+      <div>
+        <span class="mono muted">02 · Reklam videoları</span>
+        <h3>Kaydırırken durduran video</h3>
+        <p class="lead">Ürün, kampanya ya da mağaza tanıtımı için kısa reklam videoları. Instagram, TikTok ve YouTube için üç format tek seferde.</p>
+        <div class="inc">
+          <div class="yes"><h4>Dahil</h4><ul><li>Senaryo ve storyboard</li><li>9:16 · 1:1 · 16:9 formatlar</li><li>Lisanslı müzik</li><li>Altyazı</li><li>2 revizyon</li></ul></div>
+          <div class="no"><h4>Dahil değil</h4><ul><li>Çekim ekibi ve stüdyo</li><li>Profesyonel seslendirme (ek hizmet)</li><li>Reklam bütçesi</li></ul></div>
+        </div>
+      </div>
+      <div class="d-vis" style="background:var(--lilac)">
+        <div class="m-phone"><div class="scene"></div><div class="cap">Hafta sonu<br>%20 indirim</div><div class="pb"><i></i></div></div>
+      </div>
+    </div>
+    <div class="detail rv" id="d-oto">
+      <div>
+        <span class="mono muted">03 · Otomasyon</span>
+        <h3>Mesajları kaçırmayan akış</h3>
+        <p class="lead">WhatsApp'tan gelen sorulara hazır yanıt, katalog ve randevu linki gönderen; formları tabloya kaydedip size haber veren akışlar.</p>
+        <div class="inc">
+          <div class="yes"><h4>Dahil</h4><ul><li>Akış tasarımı</li><li>WhatsApp Business kurulumu</li><li>Form → tablo → bildirim</li><li>Test ve kullanım eğitimi</li><li>1 ay destek</li></ul></div>
+          <div class="no"><h4>Dahil değil</h4><ul><li>WhatsApp API mesaj ücretleri</li><li>Ücretli yazılım abonelikleri</li></ul></div>
+        </div>
+      </div>
+      <div class="d-vis" style="background:var(--mintl)">
+        <div class="mock m-chat">
+          <div class="bub in on">Yarın için randevu var mı?</div>
+          <div class="bub bot on">otomasyon → takvim kontrol edildi</div>
+          <div class="bub out on">Yarın 14:00 ve 16:30 boş. Hangisini ayıralım?</div>
+          <div class="bub in on">14:00 olsun.</div>
+          <div class="bub in typing on"><span class="dots"><i></i><i></i><i></i></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="detail rv" id="d-sektor">
+      <div>
+        <span class="mono muted">04 · Sektör paketleri</span>
+        <h3>Sektörünüze göre hazır başlangıç</h3>
+        <p class="lead">Sık istenen parçaları bir araya getirdik. Sanayi ve klinik paketleri için de sorabilirsiniz.</p>
+        <div class="inc">
+          <div class="yes"><h4>Spor kulübü</h4><ul><li>Site + fikstür sayfası</li><li>Sporcu başvuru formu</li><li>Sezon tanıtım videosu</li></ul></div>
+          <div class="yes"><h4>Kafe / restoran</h4><ul><li>QR menü</li><li>Google harita kaydı</li><li>Instagram görselleri</li></ul></div>
+        </div>
+      </div>
+      <div class="d-vis" style="background:var(--butter)">
+        <div class="chips"><span class="chip"><i style="background:var(--orange)"></i>Spor kulübü</span><span class="chip"><i style="background:var(--violet)"></i>Sanayi</span><span class="chip"><i style="background:var(--mint)"></i>Kafe / restoran</span><span class="chip"><i style="background:var(--sky)"></i>Klinik</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAYDA IZGARASI ============ -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eb mono rv">Her sitede</div><h2 class="h2 rv d1">Görünmeyen ama <span class="soft">fark yaratan detaylar.</span></h2></div>
+      <p class="rv d2">Tasarım kadar altyapı da önemli. Teslim ettiğimiz her sitede bunlar standart.</p>
+    </div>
+    <div class="benefits">
+      <div class="ben rv"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h3>Hızlı açılan sayfalar</h3><p>Görseller sıkıştırılır, gereksiz kod yüklenmez. Ziyaretçi beklemez.</p></div>
+      <div class="ben rv d1"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><h3>Arama motoruna hazır</h3><p>Başlıklar, açıklamalar ve site haritası kurulu gelir.</p></div>
+      <div class="ben rv d2"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg><h3>Önce mobil</h3><p>Ziyaretçilerin çoğu telefondan gelir; tasarım önce orada test edilir.</p></div>
+      <div class="ben rv"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg><h3>Kolay güncelleme</h3><p>Metin, fiyat ve görsel değişikliklerini bakım paketinde aynı gün yapıyoruz.</p></div>
+      <div class="ben rv d1"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><h3>SSL ve güvenli altyapı</h3><p>Güvenli bağlantı (https) ve düzenli yedekleme.</p></div>
+      <div class="ben rv d2"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><h3>Ziyaretçi ölçümü</h3><p>Kaç kişinin, nereden geldiğini görebileceğiniz ölçüm kurulumu.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÖNCE / SONRA ============ -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eb mono rv">Önce / sonra</div><h2 class="h2 rv d1">Aynı işletme. <span class="soft">Yeni yüz.</span></h2></div>
+      <p class="rv d2">Çizgiyi sürükleyin, farkı görün.</p>
+    </div>
+    <div class="ba rv" id="ba">
+      <div class="ba-l ba-old" aria-hidden="true">
+        <div class="o-h">YILDIZ MOBİLYA — HOŞGELDİNİZ</div>
+        <div class="o-nav"><u>Anasayfa</u> | <u>Hakkımızda</u> | <u>Ürünler</u> | <u>İletişim</u></div>
+        <div class="o-g"><span></span><span></span><span></span></div>
+        <p class="o-t">Firmamız uzun yıllardır hizmet vermektedir. Ürünlerimiz için lütfen arayınız.</p>
+      </div>
+      <div class="ba-l ba-new" aria-hidden="true">
+        <div class="n-nav"><b>Yıldız</b><span>Koleksiyon</span><span>Mağaza</span><i>Randevu al</i></div>
+        <div class="n-hero"><div><h4>Evinize uyan mobilya, aynı hafta teslim.</h4><em>Kataloğu incele →</em></div><div class="n-img"></div></div>
+      </div>
+      <span class="ba-tag l">Önce</span><span class="ba-tag r">Sonra</span>
+      <div class="ba-h"></div>
+      <input type="range" min="0" max="100" value="50" aria-label="Önce ve sonra görünümü karşılaştır">
+    </div>
+    <p class="mono muted" style="margin-top:12px">Temsilî örnek</p>
+  </div>
+</section>
+
+<!-- ============ PORTFÖY ============ -->
+<section class="sec" id="isler" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eb mono rv">Seçilmiş işler</div><h2 class="h2 rv d1">Son projeler. <span class="soft">Web, video ve daha fazlası.</span></h2></div>
+      <p class="rv d2">Siteleri canlı açabilir, videoları izleyebilirsiniz.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Portföy filtresi">
+      <button class="f on" data-f="all">Tümü</button><button class="f" data-f="web">Web</button><button class="f" data-f="video">Video</button><button class="f" data-f="otomasyon">Otomasyon</button><button class="f" data-f="yerel">Yerel işletme</button>
+    </div>
+    <div class="works" id="works">
+      <a class="work rv tilt" data-cat="web" href="https://mertozmen899-alt.github.io/merdo-mobilya-demo/" target="_blank" rel="noopener">
+        <div class="thumb" style="background:var(--peach)"><span class="pill badge">Web</span><div class="shot"><img src="assets/ref-mobilya.webp" alt="Merdo Mobilya sitesi ekran görüntüsü" width="1280" height="800" loading="lazy"></div><span class="open">Canlı aç ↗</span></div>
+        <div class="w-meta"><div><h3>Merdo Mobilya</h3><small>Mobilya mağazası demo sitesi</small></div></div>
+      </a>
+      <div class="work rv d1 tilt" data-cat="web yerel">
+        <div class="thumb" style="background:var(--mintl)"><span class="pill badge">Yerel</span><div class="mini" style="--c:#0f8a5f"><div class="mb"><i></i><i></i><i></i></div><div class="mc"><span></span><span></span><span></span><span></span></div></div><span class="open">Yakında</span></div>
+        <div class="w-meta"><div><h3>Çorumspor</h3><small>Spor kulübü sitesi</small></div></div>
+      </div>
+      <div class="work rv d2 tilt" data-cat="web yerel">
+        <div class="thumb" style="background:var(--butter)"><span class="pill badge">Yerel</span><div class="mini" style="--c:#b8860b"><div class="mb"><i></i><i></i><i></i></div><div class="mc"><span></span><span></span><span></span><span></span></div></div><span class="open">Yakında</span></div>
+        <div class="w-meta"><div><h3>Çorum Sanayi</h3><small>Sanayi sitesi rehberi</small></div></div>
+      </div>
+      <div class="work rv tilt" data-cat="video">
+        <div class="thumb" style="background:var(--lilac)"><span class="pill badge">Video · 0:24</span><div class="m-phone" style="margin:0;width:92px"><div class="scene"></div><div class="pb"><i></i></div></div><span class="open">Yakında</span></div>
+        <div class="w-meta"><div><h3>App Video reklamları</h3><small>Dikey + yatay reklam serisi</small></div></div>
+      </div>
+      <a class="work rv d1 tilt" data-cat="otomasyon" href="https://mertozmen899-alt.github.io/norevo/giris.html" target="_blank" rel="noopener">
+        <div class="thumb" style="background:var(--skyl)"><span class="pill badge">Otomasyon · aylık</span><div class="shot"><img src="assets/ref-norevo.webp" alt="Norevo ekran görüntüsü" width="1280" height="800" loading="lazy"></div><span class="open">Canlı aç ↗</span></div>
+        <div class="w-meta"><div><h3>Norevo</h3><small>Google ve Haritalar sıralama takip botu</small></div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SÜREÇ ============ -->
+<section class="sec" id="surec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eb mono rv">Süreç</div><h2 class="h2 rv d1">Fikirden yayına <span class="soft">5 adım.</span></h2></div>
+      <p class="rv d2">Uzun toplantı yok, belirsiz takvim yok. Her adımın sonunda elinizde görebileceğiniz bir şey olur.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><span class="ix">01</span><h3><span class="ic" style="background:var(--orange)"></span>Kısa <span class="hl" style="background:var(--peach)">brief</span></h3><p>15 dakikalık görüşme ya da WhatsApp mesajı. Ne istediğinizi ve örneklerinizi alırız.</p></div>
+      <div class="step rv"><span class="ix">02</span><h3><span class="ic" style="background:var(--violet);border-radius:50%"></span><span class="hl" style="background:var(--lilac)">48 saatte</span> demo</h3><p>İçerik ve logo geldikten sonra 48 saat içinde ilk taslağı görürsünüz. Ücretsiz.</p></div>
+      <div class="step rv"><span class="ix">03</span><h3><span class="ic" style="background:var(--mint);transform:rotate(45deg)"></span>Birlikte <span class="hl" style="background:var(--mintl)">düzelt</span></h3><p>Revizyonları tek listede toplarız, aynı gün işleriz.</p></div>
+      <div class="step rv"><span class="ix">04</span><h3><span class="ic" style="background:var(--amber)"></span><span class="hl" style="background:var(--butter)">Yayın</span> ve teslim</h3><p>Domain, hosting, kod ve hesaplar size teslim edilir. Hiçbir şey bize bağlı kalmaz.</p></div>
+      <div class="step rv"><span class="ix">05</span><h3><span class="ic" style="background:var(--sky);border-radius:50% 50% 0 50%"></span>İsteğe bağlı <span class="hl" style="background:var(--skyl)">bakım</span></h3><p>Aylık küçük değişiklik, güncelleme ve yedekleme paketi.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAKETLER ============ -->
+<section class="sec" id="paketler" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eb mono rv">Paketler</div><h2 class="h2 rv d1">Fiyatı saklamıyoruz. <span class="soft">Başlangıçlar burada.</span></h2></div>
+      <p class="rv d2">Aşağıdakiler başlangıç fiyatlarıdır. Kesin fiyatı işe başlamadan yazılı olarak veriyoruz; her otomasyonun fiyatı kapsamına göre değişir.</p>
+    </div>
+    <div class="how">
+      <div class="rv"><span class="mono">01 · Kapsam</span><h3>Kaç sayfa, kaç dil?</h3><p>Sayfa sayısı ve dil seçeneği temel fiyatı belirler.</p></div>
+      <div class="rv d1"><span class="mono">02 · İçerik</span><h3>Metin ve görsel kimden?</h3><p>İçeriği siz verirseniz fiyat düşer; biz hazırlarsak teklife eklenir.</p></div>
+      <div class="rv d2"><span class="mono">03 · Ekler</span><h3>Video, otomasyon, bakım</h3><p>İstediğiniz ekleri seçersiniz; işe başlamadan yazılı, sabit fiyat verilir.</p></div>
+    </div>
+    <div class="prices">
+      <div class="price feat rv"><span class="tag">48 saatte taslak</span><div><h3>Web sitesi</h3><p class="muted">Kurumsal site, katalog, landing page</p></div><div class="amt">10.000 ₺<small>'den başlar</small></div><ul><li>Size özel tasarım</li><li>Mobil uyumlu</li><li>WhatsApp ve iletişim formu</li><li>Temel SEO kurulumu</li></ul><a href="#iletisim" data-open="form" class="btn btn-d mag">Demo iste <span class="arr">→</span></a></div>
+      <div class="price rv d1"><div><h3>Emlakçı otomasyonu</h3><p class="muted">Emlak ofislerine özel</p></div><div class="amt">5.000 ₺<small>'den başlar</small></div><ul><li>Gelen taleplere hızlı yanıt</li><li>WhatsApp ile bağlantılı akış</li><li>Kurulum ve kullanım eğitimi</li><li>Kapsam ofisinize göre</li></ul><a href="#iletisim" data-open="form" class="btn btn-l">Bilgi al</a></div>
+      <div class="price rv d2"><div><h3>Norevo</h3><p class="muted">Google sıralama takip botu</p></div><div class="amt">999 ₺<small>/ay'dan başlar</small></div><ul><li>Google ve Haritalar sıranızı her hafta ölçer</li><li>ChatGPT ve Gemini cevaplarında adınız geçiyor mu, gösterir</li><li>Her hafta 3 iş, metinleri hazır</li><li>Ücretsiz deneme</li></ul><a href="https://mertozmen899-alt.github.io/norevo/giris.html" target="_blank" rel="noopener" class="btn btn-l">Norevo'yu dene ↗</a></div>
+      <div class="price rv d3"><div><h3>Özel otomasyon</h3><p class="muted">Video, form akışı, çok dilli site</p></div><div class="amt" style="font-size:38px">Teklif al</div><ul><li>WhatsApp / form akışları</li><li>Reklam videosu serisi</li><li>Çok dilli site</li><li>Kapsama göre sabit fiyat</li></ul><a href="#iletisim" data-open="form" class="btn btn-l">Görüşelim</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EK HİZMETLER ============ -->
+<section class="sec" id="ekler" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eb mono rv">Ek hizmetler</div><h2 class="h2 rv d1">Pakete ekleyin. <span class="soft">Ayrıca da alın.</span></h2></div>
+      <p class="rv d2">Sitenizi ve videonuzu tamamlayan küçük işler.</p>
+    </div>
+    <div class="extras">
+      <div class="ex rv"><span class="t">Pakete eklenebilir</span><b>Logo tasarımı</b><small>Sade, akılda kalan logo ve renk paleti.</small></div>
+      <div class="ex rv d1"><span class="t">Popüler</span><b>Sosyal medya görselleri</b><small>Gönderi ve hikâye şablonları.</small></div>
+      <div class="ex rv d2"><span class="t">Popüler</span><b>Google İşletme Profili</b><small>Haritada görünün, yorum toplayın.</small></div>
+      <div class="ex rv d3"><span class="t">Kafe / restoran</span><b>QR menü</b><small>Telefondan açılan, kolay güncellenen menü.</small></div>
+      <div class="ex rv"><span class="t">Kurumsal</span><b>Kurumsal e-posta</b><small>ad@isletmeniz.com adresleri.</small></div>
+      <div class="ex rv d1"><span class="t">İçerik</span><b>Metin yazımı</b><small>Site, ürün ve ilan metinleri.</small></div>
+      <div class="ex rv d2"><span class="t">Video</span><b>Seslendirme</b><small>Reklam videolarına profesyonel ses.</small></div>
+      <div class="ex rv d3"><span class="t">Yurt dışı</span><b>Çok dilli site</b><small>İngilizce ve diğer dillerde sayfalar.</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SSS ============ -->
+<section class="sec" id="sss" style="padding-top:0">
+  <div class="wrap faq">
+    <div><div class="eb mono rv">SSS</div><h2 class="h2 rv d1">Sık sorulanlar. <span class="soft">Kısa cevaplar.</span></h2></div>
+    <div class="faq-list">
+      <details class="rv" open><summary>Hangi işletmelerle çalışıyorsunuz?<span class="pl">+</span></summary><p>Esnaf, spor kulübü, kafe, klinik ve sanayi gibi her ölçekte işletmeyle çalışıyoruz.</p></details>
+      <details class="rv"><summary>48 saat gerçekten mümkün mü?<span class="pl">+</span></summary><p>İçerik ve logo elimize ulaştıktan sonra ilk taslak için 48 saat veriyoruz. Son hâl, revizyon sayısına göre değişir.</p></details>
+      <details class="rv"><summary>Demo ücretli mi?<span class="pl">+</span></summary><p>Hayır. İlk taslak ücretsiz; beğenmezseniz hiçbir ödeme yapmazsınız.</p></details>
+      <details class="rv"><summary>Fiyat nasıl belirleniyor?<span class="pl">+</span></summary><p>Sayfa sayısı, içeriğin kimden geleceği ve seçtiğiniz eklere göre. İşe başlamadan yazılı, sabit bir fiyat veriyoruz.</p></details>
+      <details class="rv"><summary>Ödeme nasıl yapılıyor?<span class="pl">+</span></summary><p>Ödeme planı teklifte yazılı olur; işe başlarken ve teslimde olmak üzere bölünebilir.</p></details>
+      <details class="rv"><summary>Site ve kod kimin olur?<span class="pl">+</span></summary><p>Tamamen sizin. Domain, hosting ve kod size teslim edilir; bize bağlı kalmazsınız.</p></details>
+      <details class="rv"><summary>Domain ve hosting'i siz mi alıyorsunuz?<span class="pl">+</span></summary><p>Var olanı kullanabiliriz ya da sizin adınıza kurarız. Hesaplar her durumda sizin adınıza açılır.</p></details>
+      <details class="rv"><summary>Revizyon hakkım var mı?<span class="pl">+</span></summary><p>Evet. Paketteki revizyon sayısı teklifte yazılıdır; küçük düzeltmeleri aynı gün yaparız.</p></details>
+      <details class="rv"><summary>Teslimden sonra destek veriyor musunuz?<span class="pl">+</span></summary><p>Evet. Aylık bakım paketiyle güncelleme ve yedekleme yapıyoruz; mevcut müşteriler WhatsApp destek hattından ulaşabilir.</p></details>
+      <details class="rv"><summary>Videolarda çekim yapıyor musunuz?<span class="pl">+</span></summary><p>Videolar animasyon ve hareketli grafikle hazırlanır; sizin çektiğiniz görüntüleri de kullanabiliriz. Çekim ekibi ayrı bir hizmettir.</p></details>
+      <details class="rv"><summary>Yurt dışından iş alıyor musunuz?<span class="pl">+</span></summary><p>Evet. Türkçe ve İngilizce çalışıyoruz; yurt dışı için USD/EUR fiyat veriyoruz.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KAPANIŞ ============ -->
+<section class="dark sec final" id="iletisim">
+  <div class="shape s-circ float" style="top:60px;left:7%;right:auto;width:60px;height:60px;background:var(--amber)" data-depth="20" aria-hidden="true"></div>
+  <div class="shape s-dia" style="top:auto;bottom:90px;left:auto;right:10%;background:var(--violet)" data-depth="-18" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eb mono" style="justify-content:center">Sıradaki iş sizin olsun</div>
+    <p class="big">İşletmeniz internette <span class="grad">nasıl görünüyor?</span></p>
+    <p>Bize işletmenizi anlatın; 48 saat içinde size özel bir taslakla dönelim. Ücretsiz, bağlayıcı değil.</p>
+    <div class="ctas">
+      <a href="#" data-wa="demo" class="btn btn-d mag" style="background:var(--amber);color:#0e1116">WhatsApp'tan yaz <span class="arr">→</span></a>
+      <a href="#iletisim" data-open="form" class="btn btn-l">Teklif formunu doldur</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div><a href="./" class="logo"><i></i>Merdo Media</a><p style="margin-top:14px;max-width:32ch;line-height:1.6">Web sitesi, reklam videosu ve otomasyon. Çorum'dan Türkiye'ye ve dünyaya.</p>
+      </div>
+      <div><h2>Hizmetler</h2><ul><li><a href="#hizmetler">Web siteleri</a></li><li><a href="#hizmetler">Reklam videoları</a></li><li><a href="#hizmetler">Otomasyon</a></li><li><a href="#hizmetler">Sektör paketleri</a></li></ul></div>
+      <div><h2>Stüdyo</h2><ul><li><a href="#isler">İşler</a></li><li><a href="#surec">Süreç</a></li><li><a href="#paketler">Paketler</a></li><li><a href="#sss">SSS</a></li><li><a href="web-sitesi-fiyatlari.html">Web sitesi fiyatları 2026</a></li></ul></div>
+      <div><h2>İletişim</h2><ul><li><a href="#" data-wa="demo">WhatsApp</a></li><li><a href="#iletisim" data-open="form">Teklif formu</a></li><li><a href="#" data-wa="destek">Destek talebi</a></li></ul></div>
+    </div>
+    <div class="giant" id="giant" aria-label="Merdo Media"></div>
+    <div class="legal"><span>© 2026 Merdo Media · Çorum · Tüm hakları saklıdır.</span><span class="lk"><a href="kvkk.html">KVKK Aydınlatma Metni</a><a href="gizlilik.html">Gizlilik Politikası</a><a href="cerez.html">Çerez Politikası</a></span></div>
+  </div>
+</footer>
+
+<!-- ============ SOHBET BALONU ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="av" viewBox="0 0 64 64">
+    <defs><linearGradient id="avBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4d66ff"/><stop offset="1" stop-color="#1f35c9"/></linearGradient></defs>
+    <circle cx="32" cy="32" r="32" fill="url(#avBg)"/>
+    <path d="M19 17h26a9 9 0 0 1 9 9v13a9 9 0 0 1-9 9H31l-9 7v-7h-3a9 9 0 0 1-9-9V26a9 9 0 0 1 9-9z" fill="#fff"/>
+    <ellipse cx="25" cy="31" rx="3" ry="3.4" fill="#2a45e8"><animate attributeName="ry" values="3.4;3.4;.5;3.4;3.4" keyTimes="0;.46;.5;.54;1" dur="4.5s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="39" cy="31" rx="3" ry="3.4" fill="#2a45e8"><animate attributeName="ry" values="3.4;3.4;.5;3.4;3.4" keyTimes="0;.46;.5;.54;1" dur="4.5s" repeatCount="indefinite"/></ellipse>
+    <path d="M27.5 38.5q4.5 3.6 9 0" fill="none" stroke="#2a45e8" stroke-width="2.6" stroke-linecap="round"/>
+  </symbol>
+</svg>
+<div class="cw" id="cw">
+  <div class="cw-x" aria-hidden="true"></div>
+  <div class="cw-tease" id="cwTease" role="button" tabindex="0" aria-label="Sohbeti aç"><button type="button" id="cwTeaseX" aria-label="Mesajı kapat">×</button><span class="tx" id="cwTx"></span></div>
+  <div class="cw-panel" id="cwPanel" role="dialog" aria-label="Merdo Media sohbet asistanı">
+    <div class="cw-head"><span class="cw-av"><svg><use href="#av"/></svg></span><div><b>Merdo Asistan</b><small>Çevrimiçi · hızlı yanıt</small></div><button type="button" id="cwClose" aria-label="Sohbeti kapat">×</button></div>
+    <div class="cw-body" id="cwBody" aria-live="polite"></div>
+    <p class="cw-err" id="cwErr" role="alert"></p>
+    <form class="cw-in" id="cwIn"><input id="cwInput" aria-label="Mesajınız" maxlength="80"><button type="submit" aria-label="Gönder">➤</button></form>
+    <div class="cw-foot">Otomatik asistan · Ekibimiz WhatsApp'tan döner · <a href="kvkk.html">KVKK</a></div>
+  </div>
+  <button type="button" class="cw-btn" id="cwBtn" aria-label="Sohbeti aç" aria-expanded="false"><svg><use href="#av"/></svg><span class="on"></span><span class="x" aria-hidden="true">×</span></button>
+</div>
+
+<!-- ============ TEKLİF FORMU ============ -->
+<dialog class="fm" id="fm" aria-labelledby="fmTitle">
+  <form id="fmForm" novalidate>
+    <div class="fm-top"><span class="mono muted" id="fmCount">Adım 1 / 4</span><button type="button" data-close aria-label="Formu kapat">×</button></div>
+    <div class="fm-bar"><i id="fmBar"></i></div>
+    <div class="fm-step on" data-step="1">
+      <h3 id="fmTitle">Ne yapalım?</h3><p class="h">Birden fazla seçebilirsiniz.</p>
+      <div class="opts">
+        <label class="opt"><input type="checkbox" name="hizmet" value="Web sitesi"><span>Web sitesi</span></label>
+        <label class="opt"><input type="checkbox" name="hizmet" value="Reklam videosu"><span>Reklam videosu</span></label>
+        <label class="opt"><input type="checkbox" name="hizmet" value="Otomasyon"><span>Otomasyon</span></label>
+        <label class="opt"><input type="checkbox" name="hizmet" value="Emlakçı otomasyonu"><span>Emlakçı otomasyonu</span></label>
+        <label class="opt"><input type="checkbox" name="hizmet" value="Norevo (Google sıralama)"><span>Norevo (Google sıralama)</span></label>
+        <label class="opt"><input type="checkbox" name="hizmet" value="Sektör paketi"><span>Sektör paketi</span></label>
+        <label class="opt"><input type="checkbox" name="hizmet" value="Emin değilim"><span>Emin değilim</span></label>
+      </div>
+    </div>
+    <div class="fm-step" data-step="2">
+      <h3>Sektörünüz?</h3><p class="h">Size uygun örnekleri gösterelim.</p>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="sektor" value="Spor kulübü"><span>Spor kulübü</span></label>
+        <label class="opt"><input type="radio" name="sektor" value="Sanayi"><span>Sanayi</span></label>
+        <label class="opt"><input type="radio" name="sektor" value="Kafe / restoran"><span>Kafe / restoran</span></label>
+        <label class="opt"><input type="radio" name="sektor" value="Klinik"><span>Klinik</span></label>
+        <label class="opt"><input type="radio" name="sektor" value="Mağaza / e-ticaret"><span>Mağaza / e-ticaret</span></label>
+        <label class="opt"><input type="radio" name="sektor" value="Diğer"><span>Diğer</span></label>
+      </div>
+    </div>
+    <div class="fm-step" data-step="3">
+      <h3>Bütçe aralığı</h3><p class="h">Yaklaşık bir aralık yeterli.</p>
+      <!-- shortcut: aralıklar tahmini; paket fiyatları netleşince güncelle -->
+      <div class="opts">
+        <label class="opt"><input type="radio" name="butce" value="Aylık abonelik (999 ₺+)"><span>Aylık abonelik</span></label>
+        <label class="opt"><input type="radio" name="butce" value="5.000 – 10.000 ₺"><span>5.000 – 10.000 ₺</span></label>
+        <label class="opt"><input type="radio" name="butce" value="10.000 – 25.000 ₺"><span>10.000 – 25.000 ₺</span></label>
+        <label class="opt"><input type="radio" name="butce" value="25.000 ₺ üzeri"><span>25.000 ₺ üzeri</span></label>
+        <label class="opt"><input type="radio" name="butce" value="Henüz bilmiyorum"><span>Henüz bilmiyorum</span></label>
+      </div>
+    </div>
+    <div class="fm-step" data-step="4">
+      <h3>Size nasıl ulaşalım?</h3><p class="h">Bilgileriniz yalnızca bu talep için kullanılır.</p>
+      <label class="fld">Ad soyad<input name="ad" autocomplete="name" maxlength="80" required></label>
+      <label class="fld">Telefon (WhatsApp)<input name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xx xxx xx xx" maxlength="20" required></label>
+      <label class="fld">İşletme adı (isteğe bağlı)<input name="isletme" maxlength="80"></label>
+      <label class="fld">Not (isteğe bağlı)<textarea name="not" rows="2" maxlength="500"></textarea></label>
+      <label class="kvkk"><input type="checkbox" name="kvkk"><span><a href="kvkk.html" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum ve anladım.</span></label>
+    </div>
+    <div class="fm-step fm-done" data-step="5">
+      <h3>Teşekkürler!</h3><p class="h">WhatsApp'ta mesajınız hazır. Göndermeniz yeterli; en kısa sürede dönüş yapacağız.</p>
+      <a class="btn btn-d" id="fmWa" href="#" target="_blank" rel="noopener">WhatsApp'ı aç <span class="arr">→</span></a>
+    </div>
+    <p class="err" id="fmErr" role="alert"></p>
+    <div class="fm-nav" id="fmNav"><button type="button" class="btn btn-l" id="fmBack">Geri</button><button type="submit" class="btn btn-d" id="fmNext"><span id="fmNextT">Devam</span> <span class="arr">→</span></button></div>
+  </form>
+</dialog>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
