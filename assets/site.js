@@ -5,7 +5,7 @@
   const TR = {
     locale: 'tr-TR',
     kvkkUrl: 'kvkk.html',
-    words: ['büyütüyoruz.', 'hızlandırıyoruz.', 'görünür kılıyoruz.', 'satışa çeviriyoruz.'],
+    words: ['büyütüyoruz.', 'hızlandırıyoruz.', 'görünür kılıyoruz.', 'öne çıkarıyoruz.'],
     console: [
       ['<span class="p">›</span> brief: <span class="d">"Çorum\'da mobilya mağazası, katalog sitesi"</span>', 8],
       ['<span class="k">✓</span> renk ve tipografi seçildi', 22],
