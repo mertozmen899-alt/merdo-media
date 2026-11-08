@@ -131,7 +131,7 @@
   if (mbig) { mbig.innerHTML = mbig.textContent.split(' ').map(w => `<span class="w">${w}</span>`).join(' '); mw = $$('.w', mbig); }
   // dev footer yazısı harf harf
   const giant = $('#giant');
-  if (giant) giant.innerHTML = 'Merdo Media'.split('').map((c, i) => `<span style="transition-delay:${i * .04}s">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
+  if (giant) giant.innerHTML = '<span class="gw"></span>';
 
   // kaydırma: ilerleme çubuğu, menü, manifesto
   const hdr = $('#hdr'), prog = $('#progress');
