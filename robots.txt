@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://merdomedia.com.tr/sitemap.xml
+Sitemap: https://merdomedia.com/sitemap.xml
