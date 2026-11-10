@@ -1,235 +1,259 @@
-/* Merdo Media — ortak site betiği.
-   Metinler aşağıdaki T sözlüğünde; başka dildeki sayfa, bu dosyadan önce window.MERDO_TEXT tanımlayarak üzerine yazar.
-   Her bölüm, öğesi sayfada yoksa sessizce atlanır (yasal sayfalar da aynı dosyayı kullanır). */
 (() => {
   const TR = {
-    locale: 'tr-TR',
     kvkkUrl: 'kvkk.html',
-    words: ['büyütüyoruz.', 'hızlandırıyoruz.', 'görünür kılıyoruz.', 'öne çıkarıyoruz.'],
-    console: [
-      ['<span class="p">›</span> brief: <span class="d">"Çorum\'da mobilya mağazası, katalog sitesi"</span>', 8],
-      ['<span class="k">✓</span> renk ve tipografi seçildi', 22],
-      ['<span class="k">✓</span> 6 sayfa oluşturuldu <span class="d">(ana sayfa, katalog, iletişim…)</span>', 48],
-      ['<span class="k">✓</span> mobil ve masaüstü test edildi', 70],
-      ['<span class="k">✓</span> son kontrol: metin + tasarım onaylandı', 88],
-      ['<span class="p">›</span> yayında · <span class="k">ilk taslak 31 sa 12 dk</span>', 100],
+    heroLines: ['Merhaba! İlk taslak <b>48 saatte</b>.', 'Hey, gıdıklanıyorum!', 'İşlerimiz biraz aşağıda.'],
+    heroAsk: [
+      ['Sitenizi <b>Google\'a</b> uygun kuruyoruz, müşteri sizi bulsun.', 'İlk taslağı <b>48 saatte</b> gönderiyoruz.'],
+      ['Reklam videonuzun <b>kurgusunu</b> biz yapıyoruz.', 'Aynı videoyu <b>dikey, kare ve yatay</b> teslim ediyoruz.'],
+      ['WhatsApp\'ınıza <b>7/24</b> cevap veren asistan kuruyoruz.', 'Sitenize <b>otomasyon</b> bağlıyoruz, formlar tabloya düşüyor.'],
     ],
     wa: { demo: 'Merhaba Merdo Media, ücretsiz demo istiyorum.', destek: 'Merhaba, mevcut müşterinizim. Destek / bakım talebim var: ' },
     menuOpen: 'Menüyü aç', menuClose: 'Menüyü kapat',
-    fm: {
-      done: 'Tamamlandı', step: (n, t) => `Adım ${n} / ${t}`, send: 'Gönder', next: 'Devam',
-      errService: 'En az bir hizmet seçin.', errSector: 'Sektörünüzü seçin.', errBudget: 'Bir bütçe aralığı seçin.',
-      errName: 'Adınızı yazın.', errPhone: 'Geçerli bir telefon numarası yazın.', errKvkk: 'Devam etmek için onay gerekli.',
-      head: 'Merhaba Merdo Media, teklif almak istiyorum.',
-      l: { hizmet: 'Hizmet', sektor: 'Sektör', butce: 'Bütçe', ad: 'Ad', tel: 'Telefon', isletme: 'İşletme', not: 'Not' },
-    },
+    fm: { errName: 'Adınızı yazın.', errPhone: 'Geçerli bir telefon numarası yazın.' },
     chat: {
-      hello: 'Merhaba, ben Elif! 👋 Merdo Media\'nın asistanıyım.',
-      ask: 'Merdo Media\'da hangi konuda bilgi almak istersiniz?', askAgain: 'Başka hangi konuda yardımcı olayım?',
+      hello: 'Merhaba, ben Mochi. Merdo Media\'nın otomatik asistanıyım.',
+      ask: 'Hangi konuda bilgi almak istersiniz?', askAgain: 'Başka bir konuda yardımcı olayım mı?',
       topics: {
-        web: ['Web sitesi yaptırmak istiyorum', 'Harika! Birkaç bilgiyle 48 saatte ilk taslağı hazırlayabiliriz.'],
-        video: ['Reklam videosu istiyorum', 'Süper! Dikey, kare ve yatay formatları tek seferde hazırlıyoruz.'],
-        oto: ['WhatsApp / form otomasyonu', 'Güzel! Gelen mesajlara hazır yanıt ve form akışları kuruyoruz.'],
-        emlak: ['Emlakçı otomasyonu istiyorum', 'Emlak ofisleri için otomasyon 5.000 ₺\'den başlıyor. Kapsamı ofisinize göre birlikte belirleyelim.'],
+        web: ['Web sitesi yaptırmak istiyorum', 'Birkaç bilgi alırsam ilk taslağı hazırlamaya başlayabiliriz.'],
+        video: ['Reklam videosu istiyorum', 'Videoyu dikey, kare ve yatay olarak hazırlıyoruz. Çekiminiz varsa onu da kullanabiliriz.'],
+        oto: ['WhatsApp / form otomasyonu', 'WhatsApp\'a gelen mesajlara otomatik cevap kuruyoruz, formları da tabloya kaydediyoruz.'],
+        emlak: ['Emlakçı otomasyonu istiyorum', 'Emlak ofisleri için otomasyon 5.000 ₺\'den başlıyor. Kapsamı ofisinize göre birlikte belirleriz.'],
         fiyat: ['Fiyatları öğrenmek istiyorum', 'Web sitesi 10.000 ₺\'den, emlakçı otomasyonu 5.000 ₺\'den, Norevo aylık 999 ₺\'den başlıyor. Size özel fiyat için birkaç bilgi yeterli.'],
       },
-      client: 'Zaten müşteriyim', clientReply: 'Hoş geldiniz! Destek talebinizi WhatsApp\'tan iletebilirsiniz.',
-      formOpt: 'Teklif formunu doldurayım', formReply: 'Formu açıyorum, 4 kısa adım.',
+      client: 'Zaten müşteriyim', clientReply: 'Hoş geldiniz. Destek talebinizi WhatsApp\'tan iletebilirsiniz.',
       writeWa: 'WhatsApp\'ta yaz →', other: 'Başka bir konu',
       askName: 'Size nasıl hitap edeyim? Adınızı yazar mısınız?', namePh: 'Adınız', phonePh: '05xx xxx xx xx',
-      nice: n => `Memnun oldum, ${n}! WhatsApp numaranızı yazar mısınız? Size oradan döneceğiz.`,
-      ready: 'Teşekkürler! Talebiniz hazır. Aşağıdaki butonla WhatsApp\'ta gönderin, en kısa sürede dönelim.',
+      nice: n => `Memnun oldum, ${n}. WhatsApp numaranızı yazar mısınız? Size oradan döneceğiz.`,
+      ready: 'Teşekkürler, mesajınız hazır. Aşağıdaki butonla WhatsApp\'tan gönderin, en kısa sürede döneriz.',
       privacy: url => `Bilgileriniz yalnızca bu talep için kullanılır. <a href="${url}">KVKK Aydınlatma Metni</a>`,
       sendWa: 'WhatsApp\'ta gönder →',
       msg: (topic, ad, tel) => `Merhaba Merdo Media, bilgi almak istiyorum.\nKonu: ${topic}\nAd: ${ad}\nTelefon: ${tel}`,
       open: 'Sohbeti aç', close: 'Sohbeti kapat',
       refYes: 'Evet, göster', refNo: 'Hayır, devam edelim', refOpen: 'Siteyi aç ↗',
-      refAfter: 'Beğendiyseniz sizin için de benzerini hazırlayalım.',
+      refAfter: 'Beğendiyseniz size de benzerini yapabiliriz.',
+      refAlt: t => `${t} ekran görüntüsü`,
       refs: {
-        web: { q: 'Referans web sitemizi görmek ister misiniz?', intro: 'Yaptığımız sitelerden biri:', title: 'Merdo Mobilya', desc: 'Mobilya mağazası için katalog sitesi', url: 'https://mertozmen899-alt.github.io/merdo-mobilya-demo/', img: 'ref-mobilya.webp' },
-        oto: { q: 'Yaptığımız otomasyonlardan birini görmek ister misiniz?', intro: 'Örnek otomasyonumuz:', title: 'Norevo', desc: 'Google ve Haritalar sıralama takip botu', url: 'https://mertozmen899-alt.github.io/norevo/', img: 'ref-norevo.webp' },
+        web: { q: 'Örnek bir site görmek ister misiniz?', intro: 'Örnek olarak hazırladığımız demo site:', title: 'Merdo Mobilya', desc: 'Mobilya mağazası için demo', url: 'https://mertozmen899-alt.github.io/merdo-mobilya-demo/', img: 'ref-mobilya.webp' },
+        oto: { q: 'Yaptığımız otomasyonlardan birini görmek ister misiniz?', intro: 'Bizim otomasyonumuz Norevo:', title: 'Norevo', desc: 'Google ve Haritalar sıralama takip botu', url: 'https://mertozmen899-alt.github.io/norevo/', img: 'ref-norevo.webp' },
       },
     },
-    tease: [
-      '<b>Siteniz hâlâ hazır değil mi?</b> İlk taslağı 48 saatte görün. Yardımcı olayım mı?',
-      '<b>Reklam videosu</b> mu lazım? Dikey, kare ve yatay formatları tek seferde hazırlıyoruz.',
-      '<b>Merhaba!</b> İşletmeniz için doğru paketi birlikte seçelim mi?',
-    ],
   };
-  // başka dilin sözlüğü eksik anahtar bırakırsa Türkçeye düşer
   const X = window.MERDO_TEXT || {};
   const T = Object.assign({}, TR, X, { fm: Object.assign({}, TR.fm, X.fm), chat: Object.assign({}, TR.chat, X.chat) });
   const ASSETS = new URL('.', document.currentScript.src).href;
 
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const fine = matchMedia('(pointer: fine)').matches;
-  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const root = document.documentElement;
-
-  // açık / koyu tema
-  const themeBtn = $('#theme');
-  if (themeBtn) themeBtn.addEventListener('click', () => {
-    const t = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    root.dataset.theme = t;
-    try { localStorage.setItem('merdo-theme', t); } catch (e) {}
-  });
-
-  // saat
-  const clock = $('#clock');
-  if (clock) { const tick = () => clock.textContent = new Date().toLocaleTimeString(T.locale); tick(); setInterval(tick, 1000); }
-
-  // başlıkta değişen kelime
-  const typed = $('#typed');
-  if (typed && !reduce) {
-    const words = T.words;
-    let wi = 0, ci = words[0].length, del = true;
-    const loop = () => {
-      if (del) { ci--; if (ci === 0) { del = false; wi = (wi + 1) % words.length; } } else ci++;
-      typed.textContent = words[wi].slice(0, ci) || ' ';
-      // kelime tamamlandı: önce son harfi göster, sonra bekle
-      if (!del && ci === words[wi].length) { del = true; return setTimeout(loop, 2200); }
-      setTimeout(loop, del ? 45 : 85);
-    };
-    setTimeout(loop, 2400);
-  }
-
-  // canlı konsol
-  const cbody = $('#cbody'), cbar = $('#cbar');
-  if (cbody) {
-    const runConsole = () => {
-      cbody.innerHTML = ''; cbar.style.width = '0';
-      T.console.forEach(([html, pct], i) => {
-        const d = document.createElement('div'); d.className = 'l'; d.innerHTML = html; cbody.appendChild(d);
-        setTimeout(() => { d.classList.add('on'); cbar.style.width = pct + '%'; }, reduce ? 0 : 600 + i * 900);
-      });
-      if (!reduce) setTimeout(runConsole, 600 + T.console.length * 900 + 3500);
-    };
-    runConsole();
-  }
-
-  // görünme + sayaç + maketler
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return;
-    const el = e.target; el.classList.add('in'); io.unobserve(el);
-    $$('[data-count]', el).forEach(n => {
-      const to = +n.dataset.count; if (reduce) return n.textContent = to;
-      const t0 = performance.now();
-      const step = t => { const p = Math.min((t - t0) / 1400, 1); n.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); };
-      requestAnimationFrame(step);
-    });
-    const mchat = $('#mchat');
-    if (mchat && el.contains(mchat)) {
-      const bs = $$('.bub', mchat);
-      bs.forEach((b, i) => setTimeout(() => { b.classList.add('on'); if (i === bs.length - 1) $('.typing', mchat).classList.add('gone'); }, reduce ? 0 : 300 + i * 800));
-    }
-  }), { threshold: .18 });
-  $$('.rv, .step, #mbrowser, #giant').forEach(el => io.observe(el));
-
-  // manifesto: kaydırdıkça kelime kelime yanar
-  const mbig = $('#mbig');
-  let mw = [];
-  if (mbig) { mbig.innerHTML = mbig.textContent.split(' ').map(w => `<span class="w">${w}</span>`).join(' '); mw = $$('.w', mbig); }
-  // dev footer yazısı harf harf
-  const giant = $('#giant');
-  if (giant) giant.innerHTML = '<span class="gw"></span>';
-
-  // kaydırma: ilerleme çubuğu, menü, manifesto
-  const hdr = $('#hdr'), prog = $('#progress');
-  const onScroll = () => {
-    const y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
-    if (prog) prog.style.width = (h > 0 ? y / h * 100 : 0) + '%';
-    if (hdr) hdr.classList.toggle('scrolled', y > 10);
-    if (mbig) {
-      const r = mbig.getBoundingClientRect();
-      const p = Math.min(Math.max((innerHeight * .85 - r.top) / (r.height + innerHeight * .35), 0), 1);
-      const lit = reduce ? mw.length : Math.round(p * mw.length);
-      mw.forEach((w, i) => w.classList.toggle('lit', i < lit));
-    }
-  };
-  addEventListener('scroll', onScroll, { passive: true }); onScroll();
-
-  // portföy filtresi
-  $$('.f').forEach(b => b.addEventListener('click', () => {
-    $$('.f').forEach(x => { x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b); });
-    const f = b.dataset.f;
-    $$('#works .work').forEach(w => w.classList.toggle('hide', f !== 'all' && !w.dataset.cat.split(' ').includes(f)));
-  }));
-
-  // WhatsApp linkleri
+  if (!RM) root.classList.add('motion');
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const WA_NUMBER = '905556984086';
   const waLink = t => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t)}`;
-  $$('[data-wa]').forEach(a => { a.href = waLink(T.wa[a.dataset.wa]); a.target = '_blank'; a.rel = 'noopener'; });
+  const every = (fn, ms_) => setInterval(() => { if (!document.hidden) fn(); }, ms_);
 
-  // mobil menü
-  const burger = $('#burger'), mm = $('#mmenu');
-  const setMenu = o => {
+  const BODY = 'M-100 -38C-100 -103 -55 -140 0 -140C55 -140 100 -103 100 -38C100 -10 80 0 50 0L-50 0C-80 0 -100 -10 -100 -38Z';
+  const SVG = `<svg viewBox="-112 -152 224 158" aria-hidden="true" focusable="false"><g class="m-body"><path class="m-shape" d="${BODY}" fill="#C8F135"/><g class="m-eyes"><g class="m-open"><rect x="-39" y="-102" width="28" height="52" rx="14" fill="#111214"/><rect x="11" y="-102" width="28" height="52" rx="14" fill="#111214"/><circle cx="-31" cy="-91" r="5" fill="#F5F6F1"/><circle cx="19" cy="-91" r="5" fill="#F5F6F1"/></g><g class="m-happy" fill="none" stroke="#111214" stroke-width="11" stroke-linecap="round"><path d="M-41 -70Q-25 -96 -9 -70"/><path d="M9 -70Q25 -96 41 -70"/></g></g></g></svg>`;
+
+  const ms = $$('[data-mochi]').map(el => {
+    el.insertAdjacentHTML('beforeend', SVG);
+    return { el, eyes: $('.m-eyes', el), rot: +(el.dataset.rot || 0), fixed: el.hasAttribute('data-static') };
+  });
+  const M = el => el ? ms.find(m => m.el === el || m.el.contains(el)) : null;
+  const setEyes = (m, x, y) => { m.eyes.style.transform = `translate(${x.toFixed(1)}px,${y.toFixed(1)}px)`; };
+  const flash = (el, cls, ms_) => { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); clearTimeout(el['_' + cls]); el['_' + cls] = setTimeout(() => el.classList.remove(cls), ms_); };
+  const poke = m => { if (RM || !m) return; flash(m.el, 'squish', 560); flash(m.el, 'happy', 950); };
+  const hop = m => { if (RM || !m) return; flash(m.el, 'hop', 620); };
+
+  let px = null, py = null, lastMove = 0, raf = 0;
+  const startAt = performance.now() + 1700;
+  function aim(m, tx, ty) {
+    const r = m.el.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > innerHeight || !r.width) return;
+    let vx = tx - (r.left + r.width / 2), vy = ty - (r.top + r.height / 2);
+    if (m.rot) { const a = m.rot * Math.PI / 180, c = Math.cos(a), s = Math.sin(a); [vx, vy] = [vx * c + vy * s, -vx * s + vy * c]; }
+    const d = Math.hypot(vx, vy) || 1, k = Math.min(1, d / 220);
+    setEyes(m, vx / d * 16 * k, vy / d * 10 * k);
+  }
+  if (!RM && ms.length) {
+    const hero = M($('.hero-mochi'));
+    if (hero) setEyes(hero, -16, 4);
+    addEventListener('pointermove', e => {
+      px = e.clientX; py = e.clientY; lastMove = performance.now();
+      if (!raf) raf = requestAnimationFrame(() => {
+        raf = 0;
+        if (performance.now() < startAt) return;
+        ms.forEach(m => { if (!m.fixed) aim(m, px, py); });
+      });
+    }, { passive: true });
+    every(() => {
+      if (performance.now() - lastMove < 3500 || performance.now() < startAt) return;
+      ms.forEach(m => { if (!m.fixed && Math.random() < .55) setEyes(m, (Math.random() * 2 - 1) * 15, (Math.random() * 2 - 1) * 8); });
+    }, 2300);
+    every(() => {
+      ms.forEach(m => { if (Math.random() < .22) flash(m.el, 'blink', 150); });
+    }, 1100);
+    every(() => {
+      const vis = ms.filter(m => { if (m.fixed) return false; const r = m.el.getBoundingClientRect(); return r.width && r.bottom > 0 && r.top < innerHeight; });
+      if (vis.length) hop(vis[Math.floor(Math.random() * vis.length)]);
+    }, 3600);
+  }
+  ms.forEach(m => m.el.addEventListener('click', () => poke(m)));
+
+  let heroI = 0;
+  const heroM = $('.hero-mochi'), heroB = $('#heroBubble');
+  if (heroM && heroB) heroM.addEventListener('click', () => { heroI = (heroI + 1) % T.heroLines.length; heroB.innerHTML = T.heroLines[heroI]; });
+
+  const stage = $('.hero-stage'), heroMo = M(heroM);
+  const chips = stage ? $$('.orbit .chip', stage) : [];
+  if (heroMo && heroB && chips.length) {
+    const body = $('svg', heroMo.el);
+    const ringF = $('.ring.front path', stage), ringB = $('.ring.back path', stage);
+    const TAU = Math.PI * 2, N = chips.length, STEP = TAU / N, SPEED = STEP / 4.6;
+    const TILT = -8 * Math.PI / 180, cT = Math.cos(TILT), sT = Math.sin(TILT);
+    const hello = heroB.innerHTML, t0 = performance.now();
+    const backOut = t => 1 + 2.4 * (t - 1) ** 3 + 1.4 * (t - 1) ** 2;
+    const WIN = Math.PI / 4;
+    const STILL = [20, 160, 90].map(d => d * Math.PI / 180);
+    const said = chips.map(() => 0);
+    let L = null, v = 1, hover = -1, asked = -1, lean = 0, last = t0;
+    let th = WIN + .02 - SPEED * (startAt - t0) / 1000;
+
+    const pt = (a, k) => { const x = L.rx * Math.cos(a) * k, y = L.ry * Math.sin(a) * k; return [L.cx + x * cT - y * sT, L.cy + x * sT + y * cT]; };
+    const placeBubble = () => {
+      if (!L) return;
+      const bw = heroB.offsetWidth, bh = heroB.offsetHeight;
+      const left = Math.max(0, Math.min(L.W - bw, L.cx - bw / 2));
+      const top = Math.max(0, L.top - L.lift - bh - 10);
+      heroB.style.left = left + 'px'; heroB.style.top = top + 'px';
+      heroB.style.setProperty('--tx', (L.cx - left) + 'px');
+    };
+    const measure = () => {
+      const m = heroMo.el, W = stage.clientWidth, mw = m.offsetWidth, mh = m.offsetHeight;
+      const bleed = parseFloat(getComputedStyle(stage).getPropertyValue('--bleed')) || 0;
+      const cw = chips.map(c => c.offsetWidth), wide = Math.max(...chips.filter(c => !c.classList.contains('on')).map(c => c.offsetWidth), 0);
+      L = { W, bleed, cw, top: m.offsetTop, cx: m.offsetLeft + mw / 2, cy: m.offsetTop + mh * .5, eye: m.offsetTop + mh * .48,
+            rx: Math.min(mw * 1.15, W / 2 + bleed - wide * .3), ry: mh * .7, lift: mh * .2 };
+      [ringF, ringB].forEach((p, j) => {
+        let d = '';
+        for (let s = 0; s <= 48; s++) { const [x, y] = pt(Math.PI * (j + s / 48), 1); d += (s ? 'L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1); }
+        p.setAttribute('d', d);
+      });
+      placeBubble();
+    };
+    const say = html => { heroB.innerHTML = `<span class="say">${html}</span>`; placeBubble(); };
+    heroM.addEventListener('click', placeBubble);
+    const setAsked = i => {
+      if (i === asked) return;
+      asked = i;
+      chips.forEach((c, j) => c.classList.toggle('on', j === i));
+      L.cw = chips.map(c => c.offsetWidth);
+      if (i < 0) { say(hello); return; }
+      const lines = T.heroAsk[i];
+      say(lines[said[i]++ % lines.length]);
+      if (!RM) { flash(chips[i], 'ping', 900); if (hover < 0) hop(heroMo); }
+    };
+    const render = now => {
+      const dt = Math.min(.05, (now - last) / 1000); last = now;
+      if (!RM) { v += ((hover < 0 ? 1 : 0) - v) * Math.min(1, dt * 5); th += SPEED * v * dt; }
+      const k = RM ? 1 : backOut(Math.min(1, Math.max(0, (now - t0 - 450) / 1100)));
+      const ang = i => RM ? STILL[i % 3] : th + i * STEP;
+      let front = 0;
+      chips.forEach((c, i) => { const n = ((ang(i) % TAU) + TAU) % TAU; if (n >= WIN && n < WIN + STEP) front = i; });
+      setAsked(hover >= 0 ? hover : (RM || now < startAt) ? -1 : front);
+      let tx = 0, ty = 0;
+      chips.forEach((c, i) => {
+        const a = ang(i), sa = Math.sin(a), depth = (sa + 1) / 2, on = i === asked;
+        let [x, y] = pt(a, k);
+        const s = (RM ? .9 + .14 * depth : .58 + .5 * depth) * (on ? 1.08 : 1);
+        const hw = L.cw[i] * s / 2 + 2;
+        x = Math.min(L.W + L.bleed - hw, Math.max(hw - L.bleed, x));
+        if (on) { tx = x; ty = y; }
+        c.style.transform = `translate(${x.toFixed(1)}px,${y.toFixed(1)}px) translate(-50%,-50%) scale(${s.toFixed(3)})`;
+        c.style.opacity = RM || on ? 1 : ((.36 + .64 * depth) * Math.min(1, k * 1.6)).toFixed(3);
+        c.style.zIndex = RM || on || sa >= 0 ? 4 : 1;
+        c.style.filter = RM || on || depth > .5 ? '' : `blur(${((.5 - depth) * 2.6).toFixed(2)}px)`;
+      });
+      if (asked >= 0) {
+        const vx = tx - L.cx, vy = ty - L.eye, d = Math.hypot(vx, vy) || 1, q = Math.min(1, d / 140);
+        setEyes(heroMo, vx / d * 16 * q, vy / d * 10 * q);
+      }
+      const want = asked >= 0 ? Math.max(-7, Math.min(7, (tx - L.cx) / L.W * 20)) : 0;
+      lean += (want - lean) * (RM ? 1 : Math.min(1, dt * 6));
+      body.style.transform = `rotate(${lean.toFixed(2)}deg)`;
+    };
+    chips.forEach((c, i) => {
+      const on = () => { hover = i; if (RM) render(performance.now()); };
+      const off = () => { hover = -1; if (RM) render(performance.now()); };
+      c.addEventListener('pointerenter', on); c.addEventListener('pointerleave', off);
+      c.addEventListener('focus', on); c.addEventListener('blur', off);
+    });
+    measure();
+    new ResizeObserver(() => { measure(); if (RM) render(performance.now()); }).observe(stage);
+    new ResizeObserver(placeBubble).observe(heroB);
+    if (document.fonts) document.fonts.ready.then(() => { measure(); if (RM) render(performance.now()); });
+    if (RM) render(performance.now());
+    else {
+      let rid = 0;
+      const loop = now => { render(now); rid = document.hidden ? 0 : requestAnimationFrame(loop); };
+      rid = requestAnimationFrame(loop);
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden && !rid) { last = performance.now(); rid = requestAnimationFrame(loop); }
+      });
+    }
+  }
+
+  $$('[data-wa]').forEach(a => { a.href = waLink(T.wa[a.dataset.wa]); a.target = '_blank'; a.rel = 'noopener'; });
+  $$('[data-wa-t]').forEach(a => { a.href = waLink(a.dataset.waT); a.target = '_blank'; a.rel = 'noopener'; });
+
+  const burger = $('#burger'), mm = $('#mmenu'), logo = $('.hdr .logo');
+  if (logo) {
+    logo.classList.add('play');
+    if (!RM) every(() => { logo.classList.remove('play'); void logo.offsetWidth; logo.classList.add('play'); }, 13000);
+  }
+  const setMenu = open => {
     if (!burger || !mm) return;
-    mm.classList.toggle('open', o); burger.setAttribute('aria-expanded', o);
-    burger.setAttribute('aria-label', o ? T.menuClose : T.menuOpen); burger.textContent = o ? '×' : '☰';
+    mm.hidden = !open; burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? T.menuClose : T.menuOpen);
+    document.body.style.overflow = open ? 'hidden' : '';
   };
   if (burger && mm) {
-    burger.addEventListener('click', () => setMenu(!mm.classList.contains('open')));
+    burger.addEventListener('click', () => setMenu(mm.hidden));
     $$('a', mm).forEach(a => a.addEventListener('click', () => setMenu(false)));
   }
 
-  // çok adımlı teklif formu: veri saklanmaz, WhatsApp mesajı olarak hazırlanır
-  const fm = $('#fm');
-  let openForm = () => {};
-  if (fm) {
-    const form = $('#fmForm'), steps = $$('.fm-step', fm), err = $('#fmErr'), TOTAL = 4, F = T.fm;
-    let cur = 1;
-    const show = n => {
-      cur = n;
-      steps.forEach(s => s.classList.toggle('on', +s.dataset.step === n));
-      $('#fmBar').style.width = Math.min(n, TOTAL) / TOTAL * 100 + '%';
-      $('#fmCount').textContent = n > TOTAL ? F.done : F.step(n, TOTAL);
-      $('#fmBack').style.visibility = n > 1 && n <= TOTAL ? 'visible' : 'hidden';
-      $('#fmNav').style.display = n > TOTAL ? 'none' : '';
-      $('#fmNextT').textContent = n === TOTAL ? F.send : F.next;
-      err.textContent = '';
-    };
-    openForm = () => { form.reset(); show(1); fm.showModal(); };
-    $$('[data-open="form"]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); setMenu(false); openForm(); }));
-    $$('[data-close]', fm).forEach(b => b.addEventListener('click', () => fm.close()));
-    fm.addEventListener('click', e => { if (e.target === fm) fm.close(); });
-    $('#fmBack').addEventListener('click', () => show(cur - 1));
-    form.addEventListener('input', () => err.textContent = '');
-    const picked = n => [...form.querySelectorAll(`[name="${n}"]:checked`)].map(i => i.value);
-    const check = () => {
-      if (cur === 1 && !picked('hizmet').length) return F.errService;
-      if (cur === 2 && !picked('sektor').length) return F.errSector;
-      if (cur === 3 && !picked('butce').length) return F.errBudget;
-      if (cur === 4) {
-        if (form.elements.ad.value.trim().length < 2) return F.errName;
-        const d = form.elements.tel.value.replace(/\D/g, '');
-        if (d.length < 10 || d.length > 13) return F.errPhone;
-        if (!form.elements.kvkk.checked) return F.errKvkk;
-      }
-      return '';
-    };
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const m = check(); if (m) { err.textContent = m; return; }
-      if (cur < TOTAL) return show(cur + 1);
-      const f = form.elements, v = k => f[k].value.trim(), L = F.l;
-      const msg = [F.head, `${L.hizmet}: ${picked('hizmet').join(', ')}`, `${L.sektor}: ${picked('sektor')[0]}`, `${L.butce}: ${picked('butce')[0]}`, `${L.ad}: ${v('ad')}`, `${L.tel}: ${v('tel')}`, v('isletme') && `${L.isletme}: ${v('isletme')}`, v('not') && `${L.not}: ${v('not')}`].filter(Boolean).join('\n');
-      const url = waLink(msg);
-      $('#fmWa').href = url; window.open(url, '_blank', 'noopener'); show(TOTAL + 1);
-    });
-  }
+  (() => {
+    const openRow = h => { const d = h && h.length > 1 && document.getElementById(decodeURIComponent(h.slice(1))); if (d && d.tagName === 'DETAILS') d.open = true; };
+    $$('a[href^="#d-"]').forEach(a => a.addEventListener('click', () => openRow(a.hash)));
+    addEventListener('hashchange', () => openRow(location.hash));
+    openRow(location.hash);
+  })();
 
-  // sohbet asistanı: davet mesajı → konu → ad → telefon → hazır WhatsApp mesajı (veri saklanmaz)
-  const cw = $('#cw');
-  let openChat = () => {};
-  if (cw) {
-    const C = T.chat, cwBody = $('#cwBody'), cwBtn = $('#cwBtn'), tease = $('#cwTease'), cwTx = $('#cwTx');
-    const cwIn = $('#cwIn'), cwInput = $('#cwInput'), cwErr = $('#cwErr');
-    const AV = '<span class="mav"><svg><use href="#av"/></svg></span>';
+  (() => {
+    const list = $('#icSatirlar'), acik = $('#icAcik');
+    if (!list || !acik) return;
+    const ilk = acik.innerHTML;
+    const goster = li => {
+      $$('li.ic-on', list).forEach(x => x.classList.remove('ic-on'));
+      if (!li) { acik.innerHTML = ilk; return; }
+      li.classList.add('ic-on');
+      acik.innerHTML = `<b>* ${$('b', li).textContent}:</b> ${li.dataset.acik}`;
+    };
+    $$('li', list).forEach(li => ['pointerenter', 'focus', 'click'].forEach(ev => li.addEventListener(ev, () => goster(li))));
+    list.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') goster(null); });
+  })();
+
+
+  const guide = $('#guide');
+  let openChat = () => {}, chatOpen = false;
+  if (guide) {
+    const gBtn = $('#guideBtn');
+    const C = T.chat, cwBody = $('#cwBody'), cwIn = $('#cwIn'), cwInput = $('#cwInput'), cwErr = $('#cwErr');
+    const AV = `<span class="mav">${SVG}</span>`;
     const esc = s => s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-    const wait = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
+    const wait = ms_ => new Promise(r => setTimeout(r, RM ? 0 : ms_));
     const add = (html, cls) => { const d = document.createElement('div'); d.className = cls; d.innerHTML = html; cwBody.appendChild(d); cwBody.scrollTop = 1e6; return d; };
-    const typing = async ms => { const d = add(AV + '<div class="msg b"><span class="dots"><i></i><i></i><i></i></span></div>', 'row'); await wait(ms); d.remove(); };
-    const bot = async (html, ms = 900) => { await typing(ms); add(AV + `<div class="msg b">${html}</div>`, 'row'); };
+    const typing = async ms_ => { const d = add(AV + '<div class="msg b"><span class="dots"><i></i><i></i><i></i></span></div>', 'row'); await wait(ms_); d.remove(); };
+    const bot = async (html, ms_ = 900) => { await typing(ms_); add(AV + `<div class="msg b">${html}</div>`, 'row'); };
     const user = t => { const d = add('', 'msg u'); d.textContent = t; };
     const options = list => {
       const w = add('', 'opts-c');
@@ -242,7 +266,7 @@
       });
     };
     const lead = { topic: '', ad: '' };
-    let ask = null; // input'un beklediği adım: 'ad' | 'tel'
+    let ask = null;
     const askInput = kind => {
       ask = kind; cwErr.textContent = ''; cwInput.value = '';
       cwInput.type = kind === 'tel' ? 'tel' : 'text';
@@ -256,12 +280,10 @@
       options([
         ...Object.entries(C.topics).map(([k, [label]]) => [label, t => pickTopic(k, t)]),
         [C.client, async t => { user(t); await bot(C.clientReply); options([[C.writeWa, null, 'go', waLink(T.wa.destek)], [C.other, () => menu(true), 'ghost']]); }],
-        [C.formOpt, async t => { user(t); await bot(C.formReply, 600); await wait(400); openForm(); }],
       ]);
     };
     const askName = async () => { await bot(C.askName, 700); askInput('ad'); };
-    // referans kartı: gerçek ekran görüntüsü + başlık + "siteyi aç"
-    const refCard = r => add(AV + `<a class="refc" href="${r.url}" target="_blank" rel="noopener"><img src="${ASSETS}${r.img}" alt="${esc(r.title)} ekran görüntüsü" width="640" height="400"><span class="refc-t"><b>${esc(r.title)}</b><small>${esc(r.desc)}</small></span><span class="refc-go">${C.refOpen}</span></a>`, 'row');
+    const refCard = r => add(AV + `<a class="refc" href="${r.url}" target="_blank" rel="noopener"><img src="${ASSETS}${r.img}" alt="${esc(C.refAlt(r.title))}" width="640" height="400"><span class="refc-t"><b>${esc(r.title)}</b><small>${esc(r.desc)}</small></span><span class="refc-go">${C.refOpen}</span></a>`, 'row');
     const pickTopic = async (k, t) => {
       lead.topic = C.topics[k][0]; user(t);
       await bot(C.topics[k][1]);
@@ -295,77 +317,45 @@
 
     let started = false;
     openChat = o => {
-      cw.classList.toggle('open', o); cw.classList.remove('teasing');
-      cwBtn.setAttribute('aria-expanded', o); cwBtn.setAttribute('aria-label', o ? C.close : C.open);
+      if (o === chatOpen) return;
+      chatOpen = o;
+      guide.classList.toggle('open', o);
+      gBtn.setAttribute('aria-expanded', o); gBtn.setAttribute('aria-label', o ? C.close : C.open);
       if (o && !started) { started = true; (async () => { await bot(C.hello, 800); menu(); })(); }
-      if (o && ask) cwInput.focus();
+      if (o) (ask ? cwInput : $('#cwClose')).focus();
     };
-    cwBtn.addEventListener('click', () => openChat(!cw.classList.contains('open')));
-    $('#cwClose').addEventListener('click', () => openChat(false));
-    tease.addEventListener('click', () => openChat(true));
-    tease.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openChat(true); } });
+    gBtn.addEventListener('click', () => { const o = !chatOpen; openChat(o); if (!o) gBtn.focus(); });
+    $('#cwClose').addEventListener('click', () => { openChat(false); gBtn.focus(); });
 
-    // davet mesajları dönerek gösterilir; kapatılırsa bu oturumda bir daha çıkmaz
-    let ti = 0, teaseTimer;
-    cwTx.innerHTML = T.tease[0];
-    const stopTease = () => { clearInterval(teaseTimer); cw.classList.remove('teasing'); };
-    $('#cwTeaseX').addEventListener('click', e => { e.stopPropagation(); stopTease(); try { sessionStorage.setItem('cw-t', '1'); } catch (x) {} });
-    let seen = false; try { seen = sessionStorage.getItem('cw-t') === '1'; } catch (x) {}
-    if (!seen) setTimeout(() => {
-      if (cw.classList.contains('open')) return;
-      cw.classList.add('teasing');
-      if (!reduce) teaseTimer = setInterval(() => {
-        if (!cw.classList.contains('teasing')) return clearInterval(teaseTimer);
-        cwTx.classList.add('fade');
-        setTimeout(() => { ti = (ti + 1) % T.tease.length; cwTx.innerHTML = T.tease[ti]; cwTx.classList.remove('fade'); }, 300);
-      }, 7000);
-    }, 4000);
+    const mo = M($('.ml-mochi', gBtn));
+    if (mo && !RM) {
+      const at = (ms_, fn) => setTimeout(fn, ms_);
+      const peek = () => {
+        if (document.hidden || chatOpen || gBtn.matches(':hover')) return;
+        gBtn.classList.add('ml-rise');
+        at(600, () => gBtn.classList.add('ml-l'));
+        at(1400, () => { gBtn.classList.remove('ml-l'); gBtn.classList.add('ml-r'); });
+        at(2200, () => gBtn.classList.remove('ml-r'));
+        at(2400, () => flash(mo.el, 'blink', 150));
+        at(3100, () => gBtn.classList.remove('ml-rise'));
+      };
+      at(1200, peek);
+      every(peek, 8000);
+    }
   }
-  addEventListener('keydown', e => { if (e.key === 'Escape') { openChat(false); setMenu(false); } });
+  addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    if (chatOpen) { openChat(false); $('#guideBtn').focus(); }
+    if (mm && !mm.hidden) { setMenu(false); burger.focus(); }
+  });
 
-  // önce / sonra
-  const ba = $('#ba');
-  if (ba) ba.querySelector('input').addEventListener('input', e => ba.style.setProperty('--p', e.target.value + '%'));
+  const faqM = M($('.faq-mochi'));
+  $$('.faq-list details').forEach(d => d.addEventListener('toggle', () => { if (d.open) hop(faqM); }));
 
-  // SEO: SSS şeması görünen sorulardan üretilir
   const faqs = $$('#sss details');
   if (faqs.length) {
     const ld = document.createElement('script'); ld.type = 'application/ld+json';
-    ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(d => ({ '@type': 'Question', name: d.querySelector('summary').firstChild.textContent.trim(), acceptedAnswer: { '@type': 'Answer', text: d.querySelector('p').textContent } })) });
+    ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(d => ({ '@type': 'Question', name: d.querySelector('summary').textContent.trim(), acceptedAnswer: { '@type': 'Answer', text: d.querySelector('p').textContent } })) });
     document.head.appendChild(ld);
   }
-
-  if (!fine || reduce) return;
-
-  // imleç ışığı + fareyle hareket eden şekiller
-  const glow = $('#glow'), shapes = $$('.shape[data-depth]');
-  if (glow) addEventListener('mousemove', e => {
-    glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px';
-    const dx = e.clientX / innerWidth - .5, dy = e.clientY / innerHeight - .5;
-    shapes.forEach(s => { const d = +s.dataset.depth; const rot = s.classList.contains('s-dia') ? ' rotate(45deg)' : ''; s.style.transform = `translate(${dx * d}px, ${dy * d}px)${rot}`; });
-  });
-
-  // kartlarda imleci takip eden ışık
-  $$('.spot').forEach(c => c.addEventListener('mousemove', e => {
-    const r = c.getBoundingClientRect();
-    c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px');
-  }));
-
-  // portföy kartlarında 3B eğim
-  $$('.tilt').forEach(c => {
-    c.addEventListener('mousemove', e => {
-      const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-      c.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-4px)`;
-    });
-    c.addEventListener('mouseleave', () => c.style.transform = '');
-  });
-
-  // manyetik butonlar
-  $$('.mag').forEach(b => {
-    b.addEventListener('mousemove', e => {
-      const r = b.getBoundingClientRect();
-      b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .25}px, ${(e.clientY - r.top - r.height / 2) * .35}px)`;
-    });
-    b.addEventListener('mouseleave', () => b.style.transform = '');
-  });
 })();
