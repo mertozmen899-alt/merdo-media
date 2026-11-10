@@ -1,0 +1,111 @@
+{
+  "ofisAdi": "Örnek Emlak",
+  "kisaAd": "ÖE",
+  "danisman": "Deniz Ak",
+  "telefon": "0555 000 00 00",
+  "adres": "Örnek Sokak No: 1, Kadıköy",
+  "calismaSaatleri": "Hafta içi 09:00-19:00, Cumartesi 10:00-17:00",
+  "kapaliGunler": [0],
+  "randevuSaatleri": ["10:00", "11:30", "14:00", "16:00"],
+  "bolgeler": ["Kadıköy", "Ataşehir", "Maltepe"],
+  "butceAraliklari": {
+    "satilik": [7000000, 10000000, 15000000],
+    "kiralik": [35000, 50000]
+  },
+  "ilanlar": [
+    {
+      "no": "1042",
+      "tur": "satilik",
+      "baslik": "Moda'ya yürüme mesafesinde 2+1",
+      "semt": "Kadıköy",
+      "oda": "2+1",
+      "m2": 95,
+      "fiyat": 11900000,
+      "aidat": 1800,
+      "krediyeUygun": true,
+      "not": "Ara kat, balkonlu, 2009 yapı.",
+      "foto": ""
+    },
+    {
+      "no": "1057",
+      "tur": "satilik",
+      "baslik": "Göztepe'de site içinde 3+1",
+      "semt": "Kadıköy",
+      "oda": "3+1",
+      "m2": 140,
+      "fiyat": 18500000,
+      "aidat": 4200,
+      "krediyeUygun": true,
+      "not": "Kapalı otopark, havuz, 2015 yapı."
+    },
+    {
+      "no": "1063",
+      "tur": "satilik",
+      "baslik": "Metroya 5 dakika 2+1",
+      "semt": "Ataşehir",
+      "oda": "2+1",
+      "m2": 105,
+      "fiyat": 8750000,
+      "aidat": 2900,
+      "krediyeUygun": true,
+      "not": "Site içi, kapalı otopark, 2018 yapı."
+    },
+    {
+      "no": "1071",
+      "tur": "satilik",
+      "baslik": "Rezidansta boş 1+1",
+      "semt": "Ataşehir",
+      "oda": "1+1",
+      "m2": 62,
+      "fiyat": 6200000,
+      "aidat": 3500,
+      "krediyeUygun": true,
+      "not": "Güvenlik, spor salonu. Kiracı yok, hemen teslim."
+    },
+    {
+      "no": "1088",
+      "tur": "satilik",
+      "baslik": "Sahile 10 dakika yeni binada 3+1",
+      "semt": "Maltepe",
+      "oda": "3+1",
+      "m2": 130,
+      "fiyat": 9400000,
+      "aidat": 1500,
+      "krediyeUygun": false,
+      "not": "Asansörlü, kombili. İskân bekleniyor."
+    },
+    {
+      "no": "2014",
+      "tur": "kiralik",
+      "baslik": "Eşyalı 1+1",
+      "semt": "Kadıköy",
+      "oda": "1+1",
+      "m2": 55,
+      "fiyat": 38000,
+      "aidat": 1200,
+      "not": "Metroya 5 dakika, eşyalı teslim."
+    },
+    {
+      "no": "2027",
+      "tur": "kiralik",
+      "baslik": "Site içinde geniş 3+1",
+      "semt": "Ataşehir",
+      "oda": "3+1",
+      "m2": 150,
+      "fiyat": 65000,
+      "aidat": 4000,
+      "not": "Kapalı otopark, çocuk parkı."
+    },
+    {
+      "no": "2031",
+      "tur": "kiralik",
+      "baslik": "Bahçe katı 2+1",
+      "semt": "Maltepe",
+      "oda": "2+1",
+      "m2": 90,
+      "fiyat": 32000,
+      "aidat": 800,
+      "not": "Evcil hayvana uygun, bahçe kullanımı sizde."
+    }
+  ]
+}

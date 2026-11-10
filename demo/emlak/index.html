@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#111214">
+<title>Emlak asistanı demosu · Merdo Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<header class="strip">
+  <span class="strip-brand"><b>Demo</b> · Merdo Media</span>
+  <a class="strip-cta" href="https://wa.me/905556984086?text=Merhaba%2C%20emlak%20WhatsApp%20asistan%C4%B1%20demosunu%20denedim%2C%20ofisime%20kurmak%20istiyorum." target="_blank" rel="noopener">Bunu ofisime kur</a>
+</header>
+
+<main class="stage">
+  <section class="intro">
+    <p class="eyebrow">Emlakçı otomasyonu</p>
+    <h1>Gelen talebe gece yarısı bile cevap.</h1>
+    <p>Bu bir demo. Müşteriniz WhatsApp'tan yazınca asistan böyle cevap verir.</p>
+    <p>Satılık ya da kiralık seçin, ilan bulun, randevu alın. Sonunda ofisin telefonuna düşen notu görürsünüz.</p>
+  </section>
+
+  <div class="phone">
+    <div class="chat">
+      <div class="chat-head">
+        <span class="avatar" id="avatar" aria-hidden="true"></span>
+        <div class="chat-who">
+          <p class="chat-name" id="ofisAd">Yükleniyor...</p>
+          <p class="chat-status" id="status">çevrimiçi</p>
+        </div>
+        <button type="button" class="head-btn" id="restart" aria-label="Sohbeti baştan başlat">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div class="chat-log" id="log" role="log" aria-live="polite" aria-label="Sohbet"></div>
+      <form class="chat-input" id="form" autocomplete="off">
+        <label class="sr-only" for="msg">Mesajınız</label>
+        <input id="msg" type="text" placeholder="Mesaj yazın" enterkeyhint="send">
+        <button type="submit" aria-label="Gönder">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 12l16-8-6 16-2.5-6.5z" fill="currentColor"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <aside class="note" id="note" aria-labelledby="noteTitle">
+    <div class="note-card" id="noteCard" tabindex="-1">
+      <div class="note-top">
+        <span class="note-dot" aria-hidden="true"></span>
+        <h2 id="noteTitle">Ofise düşen not</h2>
+        <button type="button" class="note-close" id="noteClose" aria-label="Notu kapat">&times;</button>
+      </div>
+      <div id="noteBody"></div>
+      <div class="note-actions" id="noteActions" hidden>
+        <button type="button" class="note-again" id="noteAgain">Baştan dene</button>
+        <a class="note-cta" href="https://wa.me/905556984086?text=Merhaba%2C%20emlak%20WhatsApp%20asistan%C4%B1%20demosunu%20denedim%2C%20ofisime%20kurmak%20istiyorum." target="_blank" rel="noopener">Bunu ofisime kur</a>
+      </div>
+    </div>
+  </aside>
+  <div class="backdrop" id="backdrop" hidden></div>
+</main>
+
+<script src="demo.js"></script>
+</body>
+</html>

@@ -11,7 +11,7 @@
   --r:clamp(16px,2vw,24px);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--night);color:var(--paper);font:400 17px/1.6 var(--body);overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -364,7 +364,6 @@ ul,ol{margin:0;padding:0;list-style:none}
 .svc-body li::before{content:"+";display:inline-block;width:20px;color:var(--lime);font-weight:700}
 .svc-body .svc-no li{color:var(--t2)}
 .svc-body .svc-no li::before{content:"–";color:var(--t3)}
-.svc-video{width:100%;max-width:300px;height:auto;aspect-ratio:9/16;border-radius:var(--r);background:var(--night)}
 .svc-tip{grid-column:1/-1;color:var(--t2)}
 .svc-body .txt-link{grid-column:1/-1;justify-self:start}
 .steps .lr{grid-template-columns:48px 220px 180px minmax(0,1fr)}
@@ -373,7 +372,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .ptable{width:100%;border-collapse:collapse}
 .ptable th,.ptable td{text-align:left;vertical-align:baseline;padding:26px 40px 26px 0;border-bottom:1px solid var(--line)}
 .ptable thead th{font:700 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--t3);padding-top:0;padding-bottom:14px}
-.ptable tbody th{width:260px;font:700 clamp(22px,2.2vw,30px)/1.1 var(--display);letter-spacing:-.015em}
+.ptable tbody th{width:340px;font:700 clamp(22px,2.2vw,30px)/1.1 var(--display);letter-spacing:-.015em}
 .ptable td{color:var(--t2)}
 .ptable .lr-p,.ptable thead th:last-child{padding-right:0;text-align:right;color:var(--lime)}
 .ptable thead th:last-child{color:var(--t3)}
