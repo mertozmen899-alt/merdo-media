@@ -364,6 +364,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .svc-body li::before{content:"+";display:inline-block;width:20px;color:var(--lime);font-weight:700}
 .svc-body .svc-no li{color:var(--t2)}
 .svc-body .svc-no li::before{content:"–";color:var(--t3)}
+.svc-video{width:100%;max-width:300px;height:auto;aspect-ratio:9/16;border-radius:var(--r);background:var(--night)}
 .svc-tip{grid-column:1/-1;color:var(--t2)}
 .svc-body .txt-link{grid-column:1/-1;justify-self:start}
 .steps .lr{grid-template-columns:48px 220px 180px minmax(0,1fr)}
